@@ -311,7 +311,7 @@
     line-height: 20px;
   }
   
-  @media (max-width: 812px) {
+  @media (max-width: 810px) {
     .cbp_tmtimeline:before {
       display: none;
     }

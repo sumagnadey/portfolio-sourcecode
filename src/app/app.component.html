@@ -10,16 +10,15 @@
 	
 		<div class="container-fluid">
 			<app-header (newItemEvent)="toggleTheme($event)"></app-header>
-			<app-education [darkTheme]="darkTheme"></app-education>
 			<app-introduction [darkTheme]="darkTheme"></app-introduction>
 			<app-experience [darkTheme]="darkTheme"></app-experience>
-			<app-projects [darkTheme]="darkTheme"></app-projects>
+			<app-education [darkTheme]="darkTheme"></app-education>
 			<app-skillset [darkTheme]="darkTheme"></app-skillset>
-			<app-work [darkTheme]="darkTheme" [images]="images" [autoSlide]="true" [slideInterval]="5000"></app-work>
+			<app-projects [darkTheme]="darkTheme"></app-projects>
 			<app-research [darkTheme]="darkTheme"></app-research>
+			<app-work [darkTheme]="darkTheme" [images]="images" [autoSlide]="true" [slideInterval]="5000"></app-work>
 			<app-contacts [darkTheme]="darkTheme"></app-contacts>
 			
-	
 			<footer>
 				<button>
 					<a href="https://www.facebook.com/sumagnadey/" target="_blank">
