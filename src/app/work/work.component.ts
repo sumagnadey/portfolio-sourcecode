@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
 import { faChevronCircleRight, faChevronCircleLeft } from '@fortawesome/free-solid-svg-icons';
 
 interface carouselImage {
@@ -11,7 +11,7 @@ interface carouselImage {
 	templateUrl: './work.component.html',
 	styleUrls: ['./work.component.css']
 })
-export class WorkComponent implements OnInit {
+export class WorkComponent implements OnInit{
 	@Input() darkTheme: boolean = true;
 	@Input() images: carouselImage[] = [];
 	@Input() indicators: boolean = true;

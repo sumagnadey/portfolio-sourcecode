@@ -106,7 +106,7 @@ body::after {
 	margin: 0.2em auto 0 auto;
 	display: block;
 	/* width: 1.5em; */
-	width: 89%;
+	width: 90%;
 	border-bottom: 0.2em solid var(--primary);
 }
 

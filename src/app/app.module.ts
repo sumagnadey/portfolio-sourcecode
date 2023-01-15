@@ -1,10 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FlexLayoutModule } from '@angular/flex-layout';
 // import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import {MatToolbarModule} from '@angular/material/toolbar'; 
+import { MatIconModule } from '@angular/material/icon';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list'
+import {MatButtonModule} from '@angular/material/button';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +24,16 @@ import { WorkComponent } from './work/work.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { EducationComponent } from './education/education.component';
+import { TestComponent } from './test/test.component';
+
+import { NgParticlesModule } from "ng-particles";
+// import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
+import { IntroComponent } from './intro/intro.component';
+import { CarouselsComponent } from './carousels/carousels.component';
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { TimeComponent } from './time/time.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -30,6 +47,10 @@ import { EducationComponent } from './education/education.component';
     ContactsComponent,
     ExperienceComponent,
     EducationComponent,
+    TestComponent,
+    IntroComponent,
+    CarouselsComponent,
+    TimeComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,10 +58,16 @@ import { EducationComponent } from './education/education.component';
     FormsModule,
     BrowserAnimationsModule,
     CommonModule,
-    FontAwesomeModule
-    // AngularFontAwesomeModule,
-    // Add this in angular.json
-    // "node_modules/font-awesome/css/font-awesome.css",
+    FontAwesomeModule,
+    MatToolbarModule,
+    MatIconModule,
+    FlexLayoutModule,
+    MatSidenavModule,
+    MatListModule,
+    MatButtonModule,
+    NgbModule,
+    NgParticlesModule,
+    HttpClientModule,
 
   ],
   providers: [],

@@ -20,6 +20,23 @@ export class IntroductionComponent implements OnInit, AfterViewInit {
   blinkWidth = "1.5px";
   typingSpeedMilliseconds = 150;
 
+
+  options = {
+    fpsLimit: 60,
+    particles: {
+      color: {
+        value: "#000"
+      },
+      links: {
+        enable: true,
+        color: "#000"
+      },
+      move: {
+        enable: true
+      }
+    }
+  };
+
   private i = 0;
 
   sleep = (ms: number) => new Promise(r => setTimeout(r, ms));
@@ -59,4 +76,8 @@ private typingEffect(el: any): void {
     };
     loopTyping();
   }
+
+//   particlesLoaded(container: Container): void {
+//     console.log(container);
+// }
 }

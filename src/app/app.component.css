@@ -1,9 +1,11 @@
 .container-fluid {
     padding: 0;
     margin: 0;
-	/* background-color: lemonchiffon; */
+	/* background-color: var(--bg); */
 }
-
+html{
+	scroll-behavior: smooth;
+}
 /* ================
 	 1. variables
    ================ */
@@ -17,6 +19,9 @@
 	--primary-alt: #185dc7;
 	--primary-light: rgba(44, 93, 206, 0.1);
 	--container-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+	--cover: url("/assets/wavesOpacity_light.svg");
+	--img-background: rgba( 255, 255, 255, 0.7 );
+	;
 }
 
 .body-dark {
@@ -29,6 +34,9 @@
 	--primary-light: rgb(18 17 49 / 44%);
 	--container-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
 		rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+	--cover: url("/assets/wavesOpacity.svg");
+	--img-background: rgba( 255, 255, 255, 0.3 );
+	;
 }
 
 /* =====================
@@ -74,6 +82,7 @@ body {
 	/* max-width: 1100px; */
 	width: 100%;
 	background-color: var(--bg);
+	/* background-color: red; */
 	color: var(--fg);
 	font-family: 'Poppins', sans-serif;
 	line-height: 1.5;
@@ -85,20 +94,7 @@ body {
      3. layout
    ============= */
 
-footer {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	height: 7em;
-	/* flex-direction: column; */
-	justify-content: center;
-	position: absolute;
-	left: 0;
-	right: 0;
-	background-color: var(--bg-alt);
-	/* background-color: coral; */
-	box-shadow: 0 -0.1em 1em rgb(0, 0, 0, 0.1);
-}
+
 
 footer ul {
 	display: flex;
@@ -108,6 +104,7 @@ footer small {
 	font-weight: 500;
 	margin-top: 0.5em;
 }
+
 button {
 	border: none;
 	cursor: pointer;
@@ -119,12 +116,21 @@ button {
 }
 
 button:hover {
-	transform: rotate(360deg);
+	transform: rotateY(60deg);
 }
 
-img {
-	width: 40px;
-	height: 40px;
+.footer_div img {
+	width: 30px;
+	height: 30px;
+	padding: 3px;
+	border: 2px solid var(--img-background);
+	/* border-radius: 50%; */
+	background: var(--img-background);
+	box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+	/* backdrop-filter: blur( 3.5px );
+	-webkit-backdrop-filter: blur( 3.5px ); */
+	border-radius: 50%;
+	border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 /* =================
@@ -169,6 +175,54 @@ img {
 	}
 }
 
+
+
+footer .txt {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	text-align: center;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	/* background-color: midnightblue; */
+	padding-bottom: 25px;
+}
+
+footer .footer_div {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	transform: rotate(180deg);
+
+}
+
 footer {
+	/* flex-direction: column; */
+	
+	position: absolute;
+	left: 0;
+	right: 0;
 	background-color: var(--bg);
+	/* background-color: coral; */
+	/* box-shadow: 0 -0.1em 1em rgb(0, 0, 0, 0.1); */
+	
+
+	align-items: center;
+	align-content: center;
+	text-align: center;
+	padding: 30px 0 100px 0;
+	height: 8em;
+	/* flex-direction: row; */
+	justify-content: center;
+	position: relative;
+	background: var(--cover) no-repeat;
+	/* background-clip: border-box; */
+	background-size: cover;
+	transform: rotate(180deg);
+	/* object-fit: fill; */
+}
+.txt .image{
+	width: 300px;
 }

@@ -15,7 +15,7 @@
   --primary-alt-odd: rgb(156, 41, 41);
   --primary-alt-even: navy;
 	--primary-light: rgba(44, 93, 206, 0.1);
-	--container-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+	--container-shadow: 0 2px 4px rgb(0 0 0 / 40%);
 }
 
 .body-dark {
@@ -30,8 +30,8 @@
   /* --primary-alt-even: #444175; */
   --primary-alt-even: #302d70;
 	--primary-light: rgb(18 17 49 / 44%);
-	--container-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
-		rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+	--container-shadow: rgba(53, 49, 49, 0) 0px 4px 6px -1px,
+		rgba(95, 92, 92, 0.06) 0px 2px 4px -1px;
 }
 
 /* =====================
@@ -42,7 +42,8 @@
     margin: 0 0;
     padding: 0;
     width: 100%;
-    background-color: var(--bg);
+    /* background-color: var(--bg); */
+    background-color: transparent;
     color: var(--fg);
     font-family: 'Poppins', sans-serif;
     line-height: 1.5;
@@ -50,7 +51,6 @@
     position: relative;
     -webkit-font-smoothing: antialiased;
   }
-  
   .section-title {
     padding-top: 0.5em;
     margin-bottom: 1.5em;
@@ -311,7 +311,7 @@
     line-height: 20px;
   }
   
-  @media (max-width: 810px) {
+  @media (max-width: 795px) {
     .cbp_tmtimeline:before {
       display: none;
     }
@@ -331,6 +331,7 @@
       padding: 50px 30px 30px 30px;
       font-weight: 400;
       font-size: 95%;
+      box-shadow: var(--container-shadow);
       /* float: left; */
     }
   

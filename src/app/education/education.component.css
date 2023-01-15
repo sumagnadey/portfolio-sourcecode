@@ -56,7 +56,8 @@ body {
   /* max-width: 1100px; */
   max-width: 100%;
   max-height: 100%;
-  background-color: var(--bg);
+  /* background-color: var(--bg); */
+  background-color: transparent;
   color: var(--fg);
   font-family: 'Poppins', sans-serif;
   line-height: 1.5;
@@ -193,6 +194,8 @@ h2 {
   height: 300px;
   display: flex;
   flex-wrap: wrap;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
 }
 
 .flip-card-back {
@@ -247,10 +250,11 @@ p {
 }
 
 .card_title p {
-  background-color: rgba(0, 0, 0, 0.45);
-  backdrop-filter: blur(5px);
+  background-color: rgba(5, 20, 29, 0.45);
+  backdrop-filter: blur(3px);
   font-family: 'Merriweather';
-  font-size: 20px;
+  
+  font-size: 17px;
   font-weight: lighter;
   padding: 5px 0;
 }
@@ -259,7 +263,7 @@ p {
   border-radius: 0px 0px 40px 40px;
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
   margin-top: -80px;
   height: 40px;
   width: 100%;
