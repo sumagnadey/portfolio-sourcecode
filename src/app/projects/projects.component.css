@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Ysabeau+Infant:wght@500&display=swap');
 /* ================
 	 1. variables
    ================ */
@@ -128,8 +130,9 @@ section {
 
 .project-content p {
 	margin: 1.2em 1.2em;
-	font-size: medium;
-	font-family: 'Fira Code', monospace;
+	/* font-size: medium; */
+	font-size: large;
+	font-family: 'Ysabeau Infant', sans-serif;
 }
 
 .project-skill,

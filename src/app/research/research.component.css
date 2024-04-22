@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Ysabeau+Infant:wght@300&display=swap');
 /* ================
 	 1. variables
    ================ */
@@ -190,9 +191,9 @@ section {
     padding: 1;
     color: var(--text);
     text-align: center;
-    font-size: 1.1em;
+    font-size: medium;
     /* font-family: monospace */
-	font-family: 'Fira Code', monospace;
+    font-family: 'Ysabeau Infant', sans-serif;
 }
 
 .container .card .face.face2 {

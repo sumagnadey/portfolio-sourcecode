@@ -2,6 +2,7 @@
 	 1. variables
    ================ */
    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Belanosima&display=swap');
 .body-light {
   --bg: #f5f6f7;
   --bg-alt: #fff;
@@ -231,7 +232,7 @@ p {
   color: var(--text);
   text-align: center;
   font-size: 1.2em;
-  font-family: 'Fira Code', monospace;
+  font-family: 'Belanosima', sans-serif;
   margin: 5px
   }
 

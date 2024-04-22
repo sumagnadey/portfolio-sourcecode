@@ -2,11 +2,11 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { faBars, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-test',
-  templateUrl: './test.component.html',
-  styleUrls: ['./test.component.css']
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.css']
 })
-export class TestComponent implements OnInit{
+export class NavbarComponent implements OnInit{
   hamburgerIcon = faBars;
 	toggleDarkIcon = faMoon;
 	toggleLightIcon = faSun;

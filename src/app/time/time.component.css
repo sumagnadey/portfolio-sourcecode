@@ -1,7 +1,6 @@
 /* ================
 	 1. variables
    ================ */
-
    .body-light {
 	--bg: #f5f6f7;
 	--bg-alt: #fff;
@@ -40,14 +39,9 @@
 }
 
 body {
-	margin: 0 auto;
-	/* margin-bottom: 140px; */
-	/* padding: 0 15%; */
-	/* max-width: 1100px; */
+	margin: 10 auto;
 	width: 100%;
-	/* background-color: var(--bg); */
 	background-color: transparent;
-	/* background-color: salmon; */
 	color: var(--fg);
 	/* font-family: 'Poppins', sans-serif; */
 	font-family: 'Quattrocento Sans', sans-serif;
@@ -71,7 +65,7 @@ div {
 	font-family: 'Quattrocento Sans', sans-serif;
 	color: var(--fg);
 	font-size: 25px;
-	letter-spacing: 5px;
+	letter-spacing: 3px;
 	padding-bottom: 20px;
 }
 
@@ -79,9 +73,9 @@ div {
 	text-align: center;
 	/* font-family: "Fira Code"; */
 	font-family: 'Quattrocento Sans', sans-serif;
-	letter-spacing: 3px;
+	letter-spacing: 2px;
 	color: var(--fg-alt);
-	font-size: 18px;
+	font-size: 20px;
 }
 
 p {

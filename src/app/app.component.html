@@ -7,28 +7,22 @@
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css"/>
 		<script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous"></script>
-		<!-- <app-carousels></app-carousels> -->
 		<div class="container-fluid">
-			<!-- <app-header (newItemEvent)="toggleTheme($event)"></app-header> -->
-			<app-test [darkTheme]="darkTheme" (newItemEvent)="toggleTheme($event)"></app-test>
-			<!-- <app-introduction [darkTheme]="darkTheme"></app-introduction> -->
+			<app-navbar [darkTheme]="darkTheme" (newItemEvent)="toggleTheme($event)"></app-navbar>
 			<app-intro [darkTheme]="darkTheme" [msg]="msg" [temperature]="temperature" [weather]="weather" [weatherIcon]="weatherIcon"></app-intro>
-			<app-time [darkTheme]="darkTheme" [time]="time" [location]="location"></app-time>
 			<app-experience [darkTheme]="darkTheme"></app-experience>
 			<app-education [darkTheme]="darkTheme"></app-education>
 			<app-skillset [darkTheme]="darkTheme"></app-skillset>
 			<app-projects [darkTheme]="darkTheme"></app-projects>
 			<app-research [darkTheme]="darkTheme"></app-research>
-			<app-work [darkTheme]="darkTheme" [images]="images" [autoSlide]="true" [slideInterval]="5000"></app-work>
+			<app-certification [darkTheme]="darkTheme"></app-certification>
 			<app-contacts [darkTheme]="darkTheme"></app-contacts>
+			<app-time [darkTheme]="darkTheme" [time]="time" [location]="location"></app-time>
+			<!-- <app-edu-update></app-edu-update> -->
 			<footer>
-				<!-- <div class="txt">
-					<img class="image" [src]="darkTheme ? 'assets/footer_dark.png' : 'assets/footer_light.png'">
-				</div> -->
 				<div class="footer_div">
 					<button>
 						<a href="https://leetcode.com/Sumagna007/" target="_blank">
-							<!-- <img [src]="darkTheme ? 'https://leetcode.com/static/images/LeetCode_logo_rvs.png' : 'https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png'"> -->
 							<img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png">
 						</a>
 					</button>
@@ -37,12 +31,6 @@
 							<img src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/24/null/external-hackerrank-is-a-technology-company-that-focuses-on-competitive-programming-logo-shadow-tal-revivo.png">
 						</a>
 					</button>
-					
-					<!-- <button>
-						<a href="https://www.scopus.com/authid/detail.uri?authorId=57221494374" target="_blank">
-							<img src="https://camo.githubusercontent.com/aff4faddb6c453dac156f873a80e9e0b21d92f86/68747470733a2f2f696a6f672e67656f6c6f67692e6573646d2e676f2e69642f7075626c69632f736974652f696d616765732f6e616e612f49636f6e5f2d5f53636f7075732e706e67">
-						</a>
-					</button> -->
 					<button>
 						<a href="https://scholar.google.com/citations?user=iFBk_AIAAAAJ&hl=en" target="_blank">
 							<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Google_Scholar_logo.svg/2048px-Google_Scholar_logo.svg.png">
@@ -63,8 +51,7 @@
 	
 			<div class="scroll-container">
 				<div aria-label="Scroll up" class="scroll-up">
-					<a onclick="window.scrollTo(top)">
-						<!-- <i aria-hidden="true" class="fas fa-arrow-up"></i> -->
+					<a *ngIf="isShow" (click)="gotoTop()">
 						<fa-icon [icon]="scrollIcon" aria-hidden="true" class="fas fa-arrow-up"></fa-icon>
 					</a>
 				</div>

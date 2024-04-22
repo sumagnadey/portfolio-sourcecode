@@ -15,7 +15,7 @@
 	--container-shadow: 0 2px 4px rgb(0 0 0 / 40%);
 
     /* --cover: url(https://www.nsbpictures.com/wp-content/uploads/2020/04/sunset-hd-background-photos-12-scaled.jpg); */
-	--cover: url(https://rare-gallery.com/uploads/posts/340061-Minimalist-Minimalism-Sunrise-Deer-Silhouette-Digital-Art-Animals.jpg);
+	--cover: url(/assets/light.jpg);
 	--cover-text: black;
 	--weather-background: rgba(236, 228, 228, 0.4);
 }
@@ -34,7 +34,7 @@
 	--container-shadow: 0 2px 4px rgba(53, 57, 102, 0.726);
     
     /* --cover: url(https://i.imgur.com/jxyuizJ.jpeg); */
-	--cover: url(https://w0.peakpx.com/wallpaper/691/682/HD-wallpaper-deer-digtial-vector-art-deer-artist-artwork-digital-art-minimalism-minimalist-deviantart.jpg);
+	--cover: url(/assets/dark.jpg);
 	--cover-text: whitesmoke;
 	--weather-background: rgba(236, 228, 228, 0.07);
 }
@@ -45,7 +45,8 @@
 
 body {
 	margin: 0 auto;
-	margin-bottom: 140px;
+	
+	margin-bottom: 55px;
 	padding: 0 15%;
 	/* max-width: 1100px; */
 	width: 100%;

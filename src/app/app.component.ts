@@ -4,9 +4,6 @@ import { faHackerrank, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faBolt, faChevronUp, faCloudBolt, faCloudRain, faCloudShowersHeavy, faCloudShowersWater, faCloudSun, faDroplet, faIcicles, faLocationDot, faRainbow, faSmog, faSnowflake, faSun, faTemperatureArrowDown, faTemperatureThreeQuarters } from '@fortawesome/free-solid-svg-icons';
 import { HttpClient } from '@angular/common/http';
 
-
-// @HostListener("window:scroll", [])
-// @HostListener('window:scroll', ['$event'])
 @Component({
 	selector: 'app-root',
 	templateUrl: './app.component.html',
@@ -33,6 +30,9 @@ export class AppComponent implements AfterViewInit{
 	wcode: any;
 	weather: any;
 	weatherIcon: any;
+
+
+	
 
 	weathercode = [
 		{
@@ -154,8 +154,7 @@ export class AppComponent implements AfterViewInit{
 	ngAfterViewInit(): void {
 		if (isPlatformBrowser(this.platformId)) {
 			let loader = this.renderer.selectRootElement('#loader');
-			if (loader.style.display != "none") loader.style.display = "none"; //hide loader
-			// console.log("test view init")
+			if (loader.style.display != "none") loader.style.display = "none";
 		}
 	}
 
@@ -175,17 +174,10 @@ export class AppComponent implements AfterViewInit{
 	}
 
 	async getData() {
-		// const res = await fetch(`http://ip-api.com/json/`);
 		const res = await fetch('https://ipwho.is/');
 		const json = await res.json();
-		// console.log(json);
-		// console.log(json.lat);
-		// this.latitude = json.lat;
-		// this.longitude = json.lon;
 		this.latitude = json.latitude;
 		this.longitude = json.longitude;
-		
-		// this.location = json.regionName + ", " + json.country;
 		this.location = json.region + ", " + json.country;
 
 		this.urlString = "https://api.open-meteo.com/v1/forecast?latitude=" + this.latitude + "&longitude=" + this.longitude + "&current_weather=true&timezone=auto";
@@ -195,19 +187,10 @@ export class AppComponent implements AfterViewInit{
 		this.temperature = json2.current_weather.temperature;
 		this.wcode = json2.current_weather.weathercode;
 		this.getWeatherDescription();
-		// console.log(this.wcode);
-
-		// this.http.get(this.urlString).subscribe((res2:any)=>{
-		// 	this.temperature = res2.current_weather.temperature;
-		// 	this.wcode = res2.current_weather.weathercode;
-		// 	// this.weather = this.weathercode.filter(this.getWeatherDescription);
-		// 	console.log(this.wcode);
-		// });
 	}
 
 	decide() {
 		this.hours = new Date().getHours();
-		// console.log("this.hours",this.hours)
 		if(this.hours < 5){
 			this.msg = "Hello !";
 			this.darkTheme = true;
@@ -240,5 +223,30 @@ export class AppComponent implements AfterViewInit{
 
 	toggleTheme(theme: boolean) {
 		this.darkTheme = theme;
+	}
+
+	isShow: boolean | undefined;
+	topPosToStartShowing = 300;
+  
+	@HostListener('window:scroll')
+	checkScroll() {
+
+	  const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+  
+	//   console.log('[scroll]', scrollPosition);
+	  
+	  if (scrollPosition >= this.topPosToStartShowing) {
+		this.isShow = true;
+	  } else {
+		this.isShow = false;
+	  }
+	}
+
+	gotoTop() {
+	  window.scroll({ 
+		top: 0, 
+		left: 0, 
+		behavior: 'smooth' 
+	  });
 	}
 }
